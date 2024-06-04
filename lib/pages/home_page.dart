@@ -6,37 +6,19 @@ import 'package:smart_home_ui/constants/strings.dart';
 import 'package:smart_home_ui/utils/smart_device_box.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+  const HomePage({super.key});
 
   @override
   State<HomePage> createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
-  bool _isAnimated = false;
 
   AnimationController? _animationController;
   AnimationController? _homeAnimationController;
   AnimationController? _developerAnimationController;
 
   final Map<String, AnimationController> _smartDeviceControllers = {};
-  // AnimationController? _smartTVAnimationController;
-  // AnimationController? _computerDisplayAnimationController;
-  // AnimationController? _computerSpeakerAnimationController;
-  // AnimationController? _electricTeapotAnimationController;
-  // AnimationController? _echoSpeakerAnimationController;
-  // AnimationController? _eyeAnimationController;
-  // AnimationController? _lavaLampAnimationController;
-  // AnimationController? _singleTypeEAnimationController;
-  // AnimationController? _doubleTypeEAnimationController;
-  // AnimationController? _alarmClockAnimationController;
-  // AnimationController? _chandelierAnimationController;
-  // AnimationController? _windowsShuttersAnimationController;
-  // AnimationController? _solarPanelAnimationController;
-  // AnimationController? _wifiAnimationController;
-  // AnimationController? _serverAnimationController;
-
-  // AnimationController? mySmartDevices[3];
 
   @override
   void initState() {
@@ -54,21 +36,6 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
         duration: const Duration(milliseconds: 500),
       );
     }
-    // _smartTVAnimationController = AnimationController(vsync: this, duration: const Duration(milliseconds: 500));
-    // _computerDisplayAnimationController = AnimationController(vsync: this, duration: const Duration(milliseconds: 500));
-    // _computerSpeakerAnimationController = AnimationController(vsync: this, duration: const Duration(milliseconds: 500));
-    // _electricTeapotAnimationController = AnimationController(vsync: this, duration: const Duration(milliseconds: 500));
-    // _echoSpeakerAnimationController = AnimationController(vsync: this, duration: const Duration(milliseconds: 500));
-    // _eyeAnimationController = AnimationController(vsync: this, duration: const Duration(milliseconds: 500));
-    // _lavaLampAnimationController = AnimationController(vsync: this, duration: const Duration(milliseconds: 500));
-    // _singleTypeEAnimationController = AnimationController(vsync: this, duration: const Duration(milliseconds: 500));
-    // _doubleTypeEAnimationController = AnimationController(vsync: this, duration: const Duration(milliseconds: 500));
-    // _alarmClockAnimationController = AnimationController(vsync: this, duration: const Duration(milliseconds: 500));
-    // _chandelierAnimationController = AnimationController(vsync: this, duration: const Duration(milliseconds: 500));
-    // _windowsShuttersAnimationController = AnimationController(vsync: this, duration: const Duration(milliseconds: 500));
-    // _solarPanelAnimationController = AnimationController(vsync: this, duration: const Duration(milliseconds: 500));
-    // _wifiAnimationController = AnimationController(vsync: this, duration: const Duration(milliseconds: 500));
-    // _serverAnimationController = AnimationController(vsync: this, duration: const Duration(milliseconds: 500));
   }
 
   @override
@@ -80,21 +47,6 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     for (var controller in _smartDeviceControllers.values) {
       controller.dispose();
     }
-    // _smartTVAnimationController?.dispose();
-    // _computerDisplayAnimationController?.dispose();
-    // _computerSpeakerAnimationController?.dispose();
-    // _electricTeapotAnimationController?.dispose();
-    // _echoSpeakerAnimationController?.dispose();
-    // _eyeAnimationController?.dispose();
-    // _lavaLampAnimationController?.dispose();
-    // _singleTypeEAnimationController?.dispose();
-    // _doubleTypeEAnimationController?.dispose();
-    // _alarmClockAnimationController?.dispose();
-    // _chandelierAnimationController?.dispose();
-    // _windowsShuttersAnimationController?.dispose();
-    // _solarPanelAnimationController?.dispose();
-    // _wifiAnimationController?.dispose();
-    // _serverAnimationController?.dispose();
     super.dispose();
   }
 
@@ -170,7 +122,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               height: 20,
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 40),
+              padding: const EdgeInsets.symmetric(horizontal: 40),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -194,7 +146,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               height: 10,
             ),
             Padding(
-              padding: EdgeInsets.symmetric(
+              padding: const EdgeInsets.symmetric(
                 horizontal: 40
               ),
               child: Divider(
@@ -206,7 +158,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               height: 10,
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 40),
+              padding: const EdgeInsets.symmetric(horizontal: 40),
               child: Text(
                 'Smart Devices',
                 style: TextStyle(
